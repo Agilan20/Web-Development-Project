@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*
+{
+margin:0;
+padding :0;
+box-sizing:border-box;
+text-decoration:none;
+text-transform:capitalize;
+font-family: 'Poppins', sans-serif;
+}
+body{
+min-height:100vh;
+}
+.header{
+position:fixed;
+top:0;
+left:0;
+right:0;
+background-color: rgba(255,255,255,0);
+padding:0px 2%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+z-index: 1000;
+height:60px;
+}
+.header.active{
+background:#4abdac;
+box-shadow: 0 5px 5px rgb(109, 104, 104);
+}
+.header .logo{
+font-size:30px;
+color:#333 ;
+text-transform: uppercase;
+text-shadow: 2px 2px rgb(112, 107, 107);
+}
+.header .logo .logotitle{
+font-weight:800;
+text-transform: uppercase;
+text-shadow: 2px 2px rgb(112, 107, 107);
+font-size:30px;
+}
+.header .navbar ul{
+list-style:none;  
+}
+.header .navbar ul li{
+position: relative;
+float: left;
+text-transform: uppercase;
+font-size: 20px;
+font-weight:400;
+}
+.header .navbar ul li a{
+padding:10px 20px;
+color:#333;
+display: block;
+}
+.header .navbar ul li a:hover{
+font-weight: 600;
+}
+header .navbar ul li ul{
+position:absolute;
+left:0;
+width:200px;
+background-color: rgba(214, 198, 198, 0.2);
+display: none;
+}
+header .navbar ul li ul li{
+width:100%;
+border-top: 1px solid rgba(0,0,0,0.1);
+background:rgba(214, 198, 198, 0.2);
+}
+header .navbar ul li ul li a{
+color:#4abdac;
+background-color:rgba(240, 219, 219, 0.8);
+}
+header .navbar ul li ul li:hover a{
+color:#333;
+background-color: #4abdac;
+}
+header .navbar ul li:focus-within >ul,
+header .navbar ul li:hover >ul{
+display:initial;
+}
+#menu-bar{
+font-weight: bold;
+display:none; 
+}
+.header label{
+font-size: 25px;
+color:#333;
+cursor: pointer;
+display:none;
+}
+.header label:hover{
+font-weight: bold;
+}
+@media(max-width:1200px){
+.header{
+padding:20px;
+}
+.header label{
+display: initial;
+
+}
+header .navbar{
+position: absolute;
+top:100%;
+left:0;
+right:0;
+background-color: #4abdac;
+color:black;
+display: none;
+}
+header .navbar ul li{
+width:100%;
+
+text-align:center;
+}
+header .navbar ul li:hover{
+background:#333;
+color:#4abdac;
+text-shadow: 1.5px 1.5px #333;
+}
+header .navbar ul > li:hover > a{
+color:#4abdac;
+}
+header .navbar ul li ul{
+position: relative;
+width:100%;
+}
+header .navbar ul li ul li{
+background-color:rgba(240, 219, 219, 0.5);
+}
+#menu-bar{
+text-transform: uppercase;
+}
+.ham:hover{
+font-weight: bold;
+}
+#menu-bar:checked ~ .navbar{
+display: initial;
+}
+}
+.headersection{
+display: flex;
+flex-wrap: wrap;
+gap:1.5rem;
+align-items: center;
+background:#9aece0;
+
+z-index:-2;
+}
+
+.headersection .headercontent{
+flex:1 1 40rem;
+padding: 50px 50px 0 60px;
+
+}
+.headercontent p{
+font-weight: 400;
+font-size: 20px;
+}
+.headersection .image{
+flex:1 1 20rem;
+height:auto;
+}
+
+.headercontent h3{
+font-size:30px;
+}
+.headersection .image img{
+width:100%;
+padding:1rem;
+}
+.headercontent .username
+{
+font-weight:700;
+}
+.headercontent h3 .titleblock
+{
+text-transform: uppercase;
+font-weight: 900;
+font-size:30px;
+}
+.headercontent .a
+{
+border:2px solid #4abdac;
+text-align: center;
+text-decoration: none;
+font-size: 25px;
+font-weight: 700;
+border-radius: 5px;
+margin-top: 10px;
+width: 120px;
+background-color: #4abdac;
+
+}
+.headercontent .a:hover
+{
+background-color: white;
+border:2px solid white;
+}
+.headercontent .a a
+{
+color:white;
+}
+.headercontent .a:hover a
+{
+color:#4abdac;
+}
+section h1{
+text-align: center;
+
+}
+.emptytable{
+padding:30px;
+text-align: center;
+}
+table{
+width:100%;
+border-collapse:collapse;
+}
+.table td,.table th{
+padding:12px 0px;
+border:1px solid #ddd;
+text-align:center;
+}
+table td{
+width:12.5%;
+}
+#table2 td{
+width:14.3%;
+}
+.table th{
+background-color: #4abdac;
+color:#fff;
+}
+.table tbody tr:nth-child(even){
+background-color: #f5f5f5;
+}
+@media(max-width:700px){
+.table thead{
+display: none;
+}
+.table, .table tbody, .table tr,.table td{
+display:block;
+width:100%;
+}
+.table tr{
+margin-bottom:15px;
+}
+.table td{
+text-align: right;
+padding-left:50%;
+text-align: right;
+position: relative;
+
+}
+.table td::before{
+content:attr(data-label);
+position:absolute;
+left:0;
+width:50%;
+padding-left:15px;
+font-size: 15px;
+font-weight:bold;
+text-align: left;
+}
+}
+
+/*form*/
+
+.container{
+height:auto;
+width:50%;
+margin-right: auto;
+margin-left: auto;
+border-bottom: 4px solid #4abdac;
+}
+.container form {
+margin-top:20px;
+padding:20px;
+}
+.container form input{
+border:none;
+
+outline:none;
+width:100%;
+margin-top:10px;
+font-size:18px;
+font-weight:400;
+}
+.container form label{
+font-size: 22px;
+font-weight: 700;
+}
+.container form table{
+border:1px solid black;
+}
+.container form input[type=email]
+{
+text-transform:lowercase;
+}
+.container form button{
+margin-top:30px;
+padding:7px 0;
+width:100%;
+background-color: #4abdac;
+font-size:22px;
+font-weight: 600;
+border:2px solid #4abdac;
+border-radius: 5px;
+}
+.container p{
+margin-top:10px;
+}
+.container p a{
+color:#4abdac;
+}
+.confirmchanges{
+margin-top: -100px;
+}
+.container form span
+{
+text-align: right;
+}
+.io{
+text-align: center;
+}
+.myaccounttable
+{
+border: 1px;
+text-align: center;
+}
+.confcancel{
+    color:red;
+    border:none;
+    font-size: 20px;
+    border-bottom: 1px solid red;
+}
+.confcancel:hover{
+    color:red;
+    border:none;
+    font-size: 22px;
+    border-bottom: 2px solid red;
+}
